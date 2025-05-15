@@ -1,110 +1,73 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>McAuley for Congress</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #b91c1c; /* Strong red */
-      color: #ffffff; /* White text */
-    }
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    header h1 {
-      font-size: 3rem;
-      color: #ffffff;
-      margin-bottom: 0.5rem;
-    }
-    header p {
-      font-size: 1.25rem;
-      color: #ffffff;
-    }
-    section {
-      margin-bottom: 2rem;
-    }
-    h2 {
-      color: #ffffff;
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
-    ul {
-      padding-left: 1.5rem;
-    }
-    li {
-      margin-bottom: 0.5rem;
-    }
-    button {
-      background-color: #ffffff;
-      color: #b91c1c;
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.2s;
-    }
-    button:hover {
-      background-color: #f3f4f6;
-    }
-    footer {
-      text-align: center;
-      margin-top: 3rem;
-      color: #f3f4f6;
-    }
-    a {
-      color: #ffffff;
-      text-decoration: underline;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <header>
-      <h1>McAuley for Congress</h1>
-      <p>Common-Sense Leadership for Indiana’s 7th District</p>
-    </header>
+export default function Home() {
+  return (
+    <main className="p-6 min-h-screen bg-red-600 text-white font-sans">
+      <div className="max-w-4xl mx-auto">
+        <header className="text-center mb-12">
+          <h1 className="text-7xl font-extrabold mb-4" style={{ fontFamily: 'Peace Sans, sans-serif' }}>
+            McAuley for Congress
+          </h1>
+          <nav className="flex justify-center gap-8 text-xl font-extrabold mt-6">
+            <a href="#about" className="hover:underline">About</a>
+            <a href="#initiatives" className="hover:underline">Initiatives</a>
+            <a href="#get-involved" className="hover:underline">Get Involved</a>
+            <a href="#donate" className="hover:underline">Donate</a>
+          </nav>
+        </header>
 
-    <section>
-      <h2>Meet Patrick McAuley</h2>
-      <p>
-        Patrick McAuley is a proud Hoosier, small business owner, and community
-        leader. With experience in real estate development, education reform
-        advocacy, and community service, Patrick is running to bring honest,
-        practical, and forward-thinking leadership to Congress.
-      </p>
-    </section>
+        <section id="about" className="mb-12">
+          <h2 className="text-3xl font-semibold mb-2">About Patrick McAuley</h2>
+          <p className="text-lg mb-4">
+            My name is Patrick McAuley, and I am proud to announce that I am running for the United States Congressional District IN-07 in the 2026 election year. This seat encompasses Washington Township, Wayne Township, Pike Township, Center Township, Warren, and parts of Perry. It essentially encompasses everything inside of I-465 and a few miles outside of it.
+          </p>
+          <p className="text-lg mb-4">
+            Over the course of the past ten years, I have served various roles in local and federal politics from interning on Capitol Hill for Senator Todd Young and then Senator Mike Braun to volunteering for grassroots efforts right here in Indianapolis. Over that period of time, I have been exposed to opportunities I only dreamed of as a young man – walking the halls of the United States Capitol, sitting in on committee hearings with world leaders, and seeing firsthand the fighting spirit of Indiana leaders right here in our great City and in Washington D.C.
+          </p>
+          <p className="text-lg mb-4">
+            I respect the hardworking and gritty mentality of our current elected officials. Senator Todd Young leads the charge on biotechnology and other cutting-edge policy areas while continuing to shape U.S. foreign policy on the world stage. Before Governor Braun was our Governor, he turned a small family business into a nationwide leader in its industry. Jefferson Shreve ran for Mayor in 2023, lost the election, and got right back up in 2024 to win a seat in the United States House of Representatives. These are the kinds of leaders I admire—and they inspire me to run for this seat.
+          </p>
+          <p className="text-lg mb-4">
+            I grew up right here in Indianapolis and attended Wabash College in Crawfordsville, IN before getting a Masters in International Economics and Finance from Valparaiso University. This campaign is not about politics. It’s about fighting for the people of my hometown. It’s about being a voice for those who cannot speak. It’s about building our great City into the future and doing it together. Vote for me…
+          </p>
+          <p className="text-lg">
+            This campaign isn’t about politics. It’s about fighting for the people, solving real problems, and building a city we’re proud to call home—for ourselves, our families, and those still to come.
+          </p>
+        </section>
 
-    <section>
-      <h2>Key Priorities</h2>
-      <ul>
-        <li>Expanding Career & Technical Education in Marion County schools</li>
-        <li>Rebuilding Indianapolis infrastructure with federal support</li>
-        <li>Fostering police-community partnerships in inner-city neighborhoods</li>
-        <li>Promoting small business and economic development</li>
-        <li>Keeping politics honest and accountable to the people</li>
-      </ul>
-    </section>
+        <section id="initiatives" className="mb-12">
+          <h2 className="text-3xl font-semibold mb-2">Key Priorities</h2>
+          <ul className="list-disc list-inside text-lg">
+            <li>Expanding Career & Technical Education in Marion County schools</li>
+            <li>Rebuilding Indianapolis infrastructure with federal support</li>
+            <li>Fostering police-community partnerships in inner-city neighborhoods</li>
+            <li>Promoting small business and economic development</li>
+            <li>Keeping politics honest and accountable to the people</li>
+          </ul>
+        </section>
 
-    <section>
-      <h2>Get Involved</h2>
-      <p>
-        Join our campaign to bring a new voice to Washington. Whether you’d like
-        to volunteer, host an event, or donate, we welcome your support.
-      </p>
-      <button>Join the Movement</button>
-    </section>
+        <section id="get-involved" className="mb-12">
+          <h2 className="text-3xl font-semibold mb-2">Get Involved</h2>
+          <p className="text-lg mb-4">
+            Join our campaign to bring a new voice to Washington. Whether you’d like to volunteer, host an event, or donate, we welcome your support.
+          </p>
+          <button className="bg-white text-red-700 px-6 py-3 rounded-2xl shadow-md hover:bg-gray-200">
+            Join the Movement
+          </button>
+        </section>
 
-    <footer>&copy; 2025 McAuley for Congress. All rights reserved.</footer>
-  </div>
-</body>
-</html>
+        <section id="donate" className="mb-12 text-center">
+          <h2 className="text-3xl font-semibold mb-4">Donate</h2>
+          <p className="text-lg mb-4">
+            Help us fuel a grassroots movement for fearless leadership. Every dollar goes directly to reaching voters and building momentum.
+          </p>
+          <button className="bg-white text-red-700 px-6 py-3 rounded-2xl shadow-md hover:bg-gray-200">
+            Donate Now
+          </button>
+        </section>
+
+        <footer className="text-center mt-16 text-gray-200">
+          &copy; 2025 McAuley for Congress. All rights reserved.
+        </footer>
+      </div>
+    </main>
+  );
+}
