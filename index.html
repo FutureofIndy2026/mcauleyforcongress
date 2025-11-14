@@ -61,7 +61,7 @@
     .brand span {
       display: block;
       font-size: 1.2rem;
-      letter-letter ing: 0.16em;
+      letter-spacing: 0.16em;
     }
 
     nav ul {
@@ -163,7 +163,7 @@
     }
 
     .btn-outline {
-      border: 2px solid var(--navy);
+      border: 1px solid var(--navy);
       color: var(--navy);
       background: transparent;
     }
@@ -189,72 +189,233 @@
       margin-bottom: 0.6rem;
     }
 
+    .hero-card ul {
+      list-style: none;
+      display: grid;
+      gap: 0.3rem;
+    }
+
+    .hero-card li::before {
+      content: "•";
+      color: var(--red);
+      margin-right: 0.35rem;
+    }
+
+    .section-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: #6b7280;
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    section h2 {
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+      color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .section-intro {
+      margin-bottom: 1.3rem;
+      max-width: 40rem;
+      font-size: 0.98rem;
+      color: #4b5563;
+    }
+
     .policy-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 1.2rem;
     }
 
+    .policy-card {
+      background: var(--light);
+      border-radius: 0.9rem;
+      padding: 1rem 1.1rem 1.1rem;
+      border: 1px solid #e2e4ee;
+    }
+
+    .policy-card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+      color: var(--navy);
+    }
+
+    .policy-tagline {
+      font-size: 0.88rem;
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+      color: #374151;
+    }
+
+    .policy-card ul {
+      padding-left: 1.1rem;
+      margin-bottom: 0.4rem;
+      font-size: 0.9rem;
+    }
+
+    .policy-card li + li {
+      margin-top: 0.25rem;
+    }
+
+    .policy-note {
+      font-size: 0.8rem;
+      color: #6b7280;
+      margin-top: 0.25rem;
+    }
+
+    .local-focus {
+      margin-top: 2.2rem;
+      padding: 1rem 1.1rem;
+      border-radius: 0.8rem;
+      border-left: 4px solid var(--red);
+      background: #fdf3f3;
+      font-size: 0.9rem;
+    }
+
+    .local-focus strong {
+      color: var(--navy);
+    }
+
+    .cta-section {
+      margin-top: 2.5rem;
+      padding: 1.5rem 1.2rem;
+      border-radius: 1rem;
+      background: var(--navy);
+      color: #fff;
+      display: grid;
+      grid-template-columns: minmax(0, 2.5fr) minmax(0, 2fr);
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .cta-section h2 {
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    .cta-section p {
+      font-size: 0.96rem;
+      max-width: 30rem;
+    }
+
+    .cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+
+    .cta-small {
+      font-size: 0.78rem;
+      margin-top: 0.6rem;
+      opacity: 0.85;
+    }
+
+    footer {
+      background: #0b1220;
+      color: #9ca3af;
+      padding: 1.3rem 1.25rem 2rem;
+      margin-top: 2rem;
+      border-top: 3px solid var(--red);
+    }
+
+    .footer-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      font-size: 0.78rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.75rem;
+      align-items: center;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    @media (max-width: 768px) {
+      .hero,
+      .cta-section {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        position: static;
+      }
+
+      .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+      }
+    }
   </style>
 </head>
-
 <body>
 
-<header>
-  <div class="nav-container">
-    <div class="brand">
-      McAuley for Congress
-      <span>Indiana&apos;s 7th District</span>
+  <header>
+    <div class="nav-container">
+      <div class="brand">
+        McAuley for Congress
+        <span>Indianapolis 7th District</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#policies">Policy Priorities</a></li>
+          <li><a href="#local">Indianapolis Focus</a></li>
+          <li><a href="#get-involved" class="btn-nav">Get Involved</a></li>
+        </ul>
+      </nav>
     </div>
-    <nav>
-      <ul>
-        <li><a href="#policies">Policy Priorities</a></li>
-        <li><a href="#local">Indianapolis Focus</a></li>
-        <li>
-          <a href="https://forms.gle/55iJGrhSmVHhPtwT6" target="_blank" class="btn btn-outline">Volunteer</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</header>
+  </header>
 
-<main>
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <div class="hero-tag">Republican • America First • Indiana</div>
+        <h1>Patrick McAuley for Congress</h1>
+        <p class="hero-sub">
+          A <span class="hero-highlight">commonsense, Trump-aligned Republican</span> focused on
+          safer streets, stronger jobs, and more opportunity for Indianapolis and Central Indiana.
+        </p>
+        <div class="hero-cta">
 
-<section class="hero">
-  <div>
-    <div class="hero-tag">Republican • America First • Indiana</div>
-    <h1>Patrick McAuley for Congress</h1>
-    <p class="hero-sub">
-      A <span class="hero-highlight">commonsense, Trump-aligned Republican</span> focused on
-      safer streets, stronger jobs, and more opportunity for Indianapolis and Central Indiana.
-    </p>
-    <div class="hero-cta">
+          <!-- UPDATED BUTTON -->
+          <a 
+            href="https://forms.gle/55iJGrhSmVHhPtwT6"
+            target="_blank"
+            class="btn btn-primary"
+          >
+            Join the Team
+          </a>
 
-      <!-- Updated button here -->
-      <a 
-        href="https://forms.gle/55iJGrhSmVHhPtwT6"
-        target="_blank"
-        class="btn btn-primary"
-      >
-        Join the Team
-      </a>
+          <a href="#policies" class="btn btn-outline">Read the Platform</a>
+        </div>
+      </div>
 
-      <a href="#policies" class="btn btn-outline">Read the Platform</a>
-    </div>
-  </div>
-
-  <aside class="hero-card">
-    <h3>Core Priorities</h3>
-    <ul>
-      <li>Secure the border & fight fentanyl</li>
-      <li>Back the police & restore public safety</li>
-      <li>Lower taxes & cut inflationary spending</li>
-      <li>Protect parental rights & expand school choice</li>
-    </ul>
-  </aside>
-</section>
-
-</main>
-
-</body>
-</html>
+      <aside class="hero-card">
+        <h3>Core Priorities</h3>
+        <ul>
+          <li>Secure the border & fight fentanyl</li>
+          <li>Back the police & restore public safety</li>
+          <li>Lower taxes & cut inflationary spending</li>
+          <li>Protect parental rights & expand school choice</li>
+        </ul>
+      </aside>
+    </section>
