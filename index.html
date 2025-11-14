@@ -345,6 +345,75 @@
       text-underline-offset: 3px;
     }
 
+    /* Signup form styling */
+    .signup-card {
+      background: #ffffff;
+      border-radius: 0.9rem;
+      padding: 1rem 1.2rem 1.2rem;
+      box-shadow: 0 10px 24px rgba(5, 10, 30, 0.35);
+      border: 1px solid var(--accent);
+      color: #111827;
+    }
+
+    .signup-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.75rem 1rem;
+      margin-top: 0.75rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      font-size: 0.88rem;
+    }
+
+    .form-group label {
+      font-weight: 600;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      border-radius: 0.5rem;
+      border: 1px solid #d1d5db;
+      padding: 0.5rem 0.6rem;
+      font: inherit;
+    }
+
+    .form-group textarea {
+      min-height: 80px;
+      resize: vertical;
+    }
+
+    .checkbox-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 0.75rem;
+      font-size: 0.85rem;
+    }
+
+    .checkbox-row label {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-weight: 400;
+    }
+
+    .signup-actions {
+      margin-top: 0.9rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+    }
+
+    .signup-note {
+      font-size: 0.78rem;
+      opacity: 0.9;
+    }
+
     @media (max-width: 768px) {
       .hero,
       .cta-section {
@@ -395,6 +464,7 @@
           safer streets, stronger jobs, and more opportunity for Indianapolis and Central Indiana.
         </p>
         <div class="hero-cta">
+          <!-- Scrolls down to the signup form -->
           <a href="#get-involved" class="btn btn-primary">Join the Team</a>
           <a href="#policies" class="btn btn-outline">Read the Platform</a>
         </div>
@@ -541,19 +611,59 @@
         <p>
           This campaign is about giving Indianapolis a strong, America First voice in Congress.
           If you believe it’s time for new leadership that stands with President Trump and stands
-          up for Indiana, we need you on the team.
+          up for Indiana, use the form to join the McAuley for Congress team.
+        </p>
+        <p class="cta-small">
+          Prefer email? Reach us anytime at <a href="mailto:info@example.com">info@example.com</a>.
         </p>
       </div>
       <div>
-        <div class="cta-buttons">
-          <!-- Replace "#" with your real links (WinRed, forms, etc.) -->
-          <a href="#" class="btn btn-primary">Donate</a>
-          <a href="#" class="btn btn-outline">Volunteer</a>
-          <a href="mailto:info@example.com" class="btn btn-outline">Contact</a>
+        <div class="signup-card">
+          <form>
+            <div class="signup-grid">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" placeholder="First and last name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" placeholder="Mobile phone" required />
+              </div>
+              <div class="form-group">
+                <label for="zip">ZIP Code</label>
+                <input id="zip" name="zip" type="text" placeholder="ZIP" required />
+              </div>
+              <div class="form-group" style="grid-column: 1 / -1;">
+                <label>How would you like to help?</label>
+                <div class="checkbox-row">
+                  <label><input type="checkbox" name="help" value="doors" /> Door knocking</label>
+                  <label><input type="checkbox" name="help" value="calls" /> Phone calls</label>
+                  <label><input type="checkbox" name="help" value="events" /> Events</label>
+                  <label><input type="checkbox" name="help" value="signs" /> Yard signs</label>
+                  <label><input type="checkbox" name="help" value="anything" /> Anything the campaign needs</label>
+                </div>
+              </div>
+              <div class="form-group" style="grid-column: 1 / -1;">
+                <label for="availability">Availability</label>
+                <input id="availability" name="availability" type="text" placeholder="Evenings, weekends, etc." />
+              </div>
+              <div class="form-group" style="grid-column: 1 / -1;">
+                <label for="comments">Comments (optional)</label>
+                <textarea id="comments" name="comments" placeholder="Tell us anything else you’d like us to know."></textarea>
+              </div>
+            </div>
+            <div class="signup-actions">
+              <button type="submit" class="btn btn-primary">Sign Up</button>
+              <p class="signup-note">
+                By signing up, you consent to be contacted by the campaign. You can opt out at any time.
+              </p>
+            </div>
+          </form>
         </div>
-        <p class="cta-small">
-          Use the buttons above to plug in your donation page, volunteer sign-up, and campaign email as they become available.
-        </p>
       </div>
     </section>
   </main>
